@@ -3,6 +3,8 @@
 #### Platform     : Windows
 #### Difficulty   : Very easy
 
+----
+
 We can start by just plain executing the program from the CMD CLI, we get a message stating "try harder"
 
 ![cli running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-mexican.png)
