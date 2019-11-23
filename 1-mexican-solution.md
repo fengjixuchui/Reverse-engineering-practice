@@ -1,7 +1,7 @@
-# Crackme name : Mexican
-# Language     : C/C++ 
-# Platform     : Windows
-# Difficulty   : Very easy
+#### Crackme name : Mexican
+#### Language     : C/C++ 
+#### Platform     : Windows
+#### Difficulty   : Very easy
 
 We can start by just plain executing the program from the CMD CLI, we get a message stating "try harder"
 
