@@ -5,12 +5,15 @@
 
 We can start by just plain executing the program from the CMD CLI, we get a message stating "try harder"
 
-![try harder](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-mexican.png)
+![cli running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-mexican.png)
+
+----
 
 Now let's load the executable file into IDA Pro, I will be using IDA Pro freeware for this.
 
 ![try harder](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/3-mexican.png)
-You can anlso see in the main fucntion where it loads the aTryHarder variable and calls printf, which is the typical result of just plain executing the program normally. We can quickly analyze this function.
+
+You can also see in the main function where it loads the aTryHarder variable and calls printf, which is the typical result of just plain executing the program normally. We can quickly analyze this function.
 
 ```assembly
 .rdata:00404003 ; char aTryHarder[]
@@ -24,6 +27,7 @@ You can anlso see in the main fucntion where it loads the aTryHarder variable an
 
 This just shows us the very basic function that will print out the string 'try harder' when the program runs the main function by default.
 
+----
 
 ![main function](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/1-mexican.png)
 
