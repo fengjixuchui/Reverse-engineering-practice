@@ -5,18 +5,18 @@ Difficulty : Very easy
 
 Pretty much the easiest crackme, viewing the main function just reveals the credentials for "logging into the program"
 
-![bad running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/1-easypeasy.png)
+![bad running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/1-easypeasy.png)
 
 Running the program and providing a random username terminates the program and gives us a taunting message.
 
-![cli running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/2-mexican.png)
+![cli running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/2-easypeasy.png)
 
 Viewing the decompiled version of the program purely just reveals the plaintext credentials to login...
 
 Username : iwonderhowitfeelstobeatimetraveler
 Password : heyamyspaceboardisbrokencanyouhelpmefindit?
 
-![good running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-easypeasy.png)
+![good running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/0-easypeasy.png)
 
 Now we can log in with the credentials.
 
