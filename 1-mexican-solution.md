@@ -1,17 +1,37 @@
-## Crackme name : Mexican
-## Language     : C/C++ 
-## Platform     : Windows
-## Difficulty   : Very easy
+# Crackme name : Mexican
+# Language     : C/C++ 
+# Platform     : Windows
+# Difficulty   : Very easy
 
-We can start by loading the executable file into IDA Pro, I will be using IDA Pro freeware for this.
+We can start by just plain executing the program from the CMD CLI, we get a message stating "try harder"
+
+![try harder](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-mexican.png)
+
+Now let's load the executable file into IDA Pro, I will be using IDA Pro freeware for this.
 
 ![main function](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/1-mexican.png)
 
+
 Analyzing the main function in graph view shows the there is a function called Z4flagv being called, the function name includes "flag" in it, so there's a good chance this is what we are after. Let's analyze the assembly to understand what is happening.
+
+![try harder](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/3-mexican.png)
+You can anlso see in the main fucntion where it loads the aTryHarder variable and calls printf, which is the typical result of just plain executing the program normally. We can quickly analyze this function.
+
+```assembly
+.rdata:00404003 ; char aTryHarder[]
+.rdata:00404003 aTryHarder      db 'try harder',0       ; DATA XREF: _main:loc_401653↑o
+.rdata:0040400E                 align 10h
+```
+1. aTryHarder is the variable name
+2. db indicates it's a double byte
+3. 'try harder' is the message
+4. the stack is also being aligned 10 bytes to accommodate for the length of the message string
+
+This just shows us the very basic function that will print out the string 'try harder' when the program runs the main function by default.
 
 ![Z4flagv function](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/2-mexican.png)
 
-```
+```assembly
 .text:004015E4                 add     eax, 17h
 .text:004015E7                 mov     byte ptr [eax], 33h
 .text:004015EA                 mov     eax, [ebp+var_C]
@@ -36,6 +56,6 @@ I cut out of the majority of text above since the function is very redundant and
 
 echoing the hex and piping it into `xxd -r -p` gives us the final flag.
 
-## flag{M3x1c4n14lw4r3_pl3rro}
+#### flag{M3x1c4n14lw4r3_pl3rro}
 
 Could this have been done more easily? I'm sure. But does this work? Yes.
