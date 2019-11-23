@@ -1,7 +1,7 @@
-Crackme name : Easy Peasy
-Language : C/C++
-Platform : Windows
-Difficulty : Very easy
+#### Crackme name : Easy Peasy
+#### Language : C/C++
+#### Platform : Windows
+#### Difficulty : Very easy
 
 Pretty much the easiest crackme, viewing the main function just reveals the credentials for "logging into the program"
 
