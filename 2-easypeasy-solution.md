@@ -13,8 +13,11 @@ Running the program and providing a random username terminates the program and g
 
 Viewing the decompiled version of the program purely just reveals the plaintext credentials to login...
 
+```
 Username : iwonderhowitfeelstobeatimetraveler
 Password : heyamyspaceboardisbrokencanyouhelpmefindit?
+```
+
 
 ![good running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/0-easypeasy.png)
 
