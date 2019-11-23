@@ -3,15 +3,12 @@
 #### Platform : Windows
 #### Difficulty : Very easy
 
-Pretty much the easiest crackme, viewing the main function just reveals the credentials for "logging into the program"
+Pretty much the easiest crackme, it's a 64 bit binary file, viewing the main function just reveals the credentials for "logging into the program". Running the program and providing a random username terminates the program and gives us a taunting message.
 
 ![bad running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/1-easypeasy.png)
 
-Running the program and providing a random username terminates the program and gives us a taunting message.
-
-![cli running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/2-easypeasy.png)
-
 Viewing the decompiled version of the program purely just reveals the plaintext credentials to login...
+![cli running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/2-easypeasy.png)
 
 ```
 Username : iwonderhowitfeelstobeatimetraveler
