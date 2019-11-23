@@ -7,13 +7,13 @@
 
 We can start by just plain executing the program from the CMD CLI, we get a message stating "try harder"
 
-![cli running](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/0-mexican.png)
+![cli running](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/0-mexican.png)
 
 ----
 
 Now let's load the executable file into IDA Pro, I will be using IDA Pro freeware for this.
 
-![try harder](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/3-mexican.png)
+![try harder](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/3-mexican.png)
 
 You can also see in the main function where it loads the aTryHarder variable and calls printf, which is the typical result of just plain executing the program normally. We can quickly analyze this function.
 
@@ -31,12 +31,12 @@ This just shows us the very basic function that will print out the string 'try h
 
 ----
 
-![main function](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/1-mexican.png)
+![main function](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/1-mexican.png)
 
 
 Analyzing the main function in graph view shows the there is a function called Z4flagv being called, the function name includes "flag" in it, so there's a good chance this is what we are after. Let's analyze the assembly to understand what is happening.
 
-![Z4flagv function](https://raw.githubusercontent.com/x00pwn/crackmes.one-solutions/master/images/2-mexican.png)
+![Z4flagv function](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/2-mexican.png)
 
 ```assembly
 .text:004015E4                 add     eax, 17h
