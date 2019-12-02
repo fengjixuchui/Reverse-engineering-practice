@@ -1,7 +1,7 @@
 #### Faker challenge -  400 points
 #### Taken from TUCTF
 
-This past weekend I participated in TUCTF, I was finally able to utilize some of the basics reverse engineering skills I have studied over the past few weeks. This challenge is called "faker", and it can be solved with a very clean and simple patch that I used to get the flag for the CTF.
+This past weekend I participated in TUCTF, I was finally able to utilize some of the basics reverse engineering skills I have studied over the past few weeks. This challenge is called "faker", and it can be solved with a very clean and simple patch that I to call a hidden flag function which I utilized to get the flag for this CTF.
 
 We can start by running the binary, we are presented with 4 options, 3 of which print out a fake flag, hence the challenge name and the 4th option exits the program. 
 
