@@ -17,7 +17,7 @@ We can analyze the main function and we see a couple of other interesting functi
 
 ![functions](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/4-faker.png)
 
-1. To start, the function `pritnFlag` function is responsible for printing and decrypting the flags (fake and real)
+1. To start, the function `printFlag` function is responsible for printing and decrypting the flags (fake and real)
 2. The function `printmenu` is responsible for printing the various options on the main menu.
 3. There are also three functions `A`, `B`, and `C` which are all responsible for printing out the fake flags. 
 4. The most important function is the `thisone` function which is not called by default and contains the real flag.
