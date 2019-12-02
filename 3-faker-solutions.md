@@ -12,9 +12,17 @@ We can open up the challenge in IDA pro and examine the internals of the program
 
 ![main function](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/1-faker.png)
 
-We can analyze the main function and we see a couple of interesting function, to start, the function `printmenu` is responsible for printing the various options, there are also three functions "A", "B", and "C" which are all responsible for printing out the fake flags. 
+We can analyze the main function and we see a couple of other interesting functions. 
 
-And within each function there is a comment with encrypted text. Assuming that encrypted text is the flag, which based on the lengths of the fake flags, we can assume it indeed is.
+![functions](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/4-faker.png)
+
+1. To start, the function `pritnFlag` function is responsible for printing and decrypting the flags (fake and real)
+2. The function `printmenu` is responsible for printing the various options on the main menu.
+3. There are also three functions `A`, `B`, and `C` which are all responsible for printing out the fake flags. 
+4. The most important function is the `thisone` function which is not called by default and contains the real flag.
+
+
+And within each flag function there is a comment with encrypted text. Assuming that encrypted text is the flag, which based on the lengths of the fake flags, we can assume it indeed is.
 
 ![fake function encrypted flag](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/2-faker.png)
 
