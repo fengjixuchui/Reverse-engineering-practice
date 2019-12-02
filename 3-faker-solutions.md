@@ -42,3 +42,7 @@ I will be targeting the `call C` within the `loc_1506:` function, instead of cal
 Then apply the patches to the current binary. Now run the patched binary and selected the "Flag C" option to call the new function to get the real flag.
 
 ![pwned](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/5-faker.png)
+
+`TUCTF{7h3r35_4lw4y5_m0r3_70_4_b1n4ry_7h4n_m3375_7h3_d3bu663r}`
+
+![won](https://raw.githubusercontent.com/x00pwn/reverse-engineering-practice/master/images/6-faker.png)
